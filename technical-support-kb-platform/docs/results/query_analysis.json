@@ -1,0 +1,175 @@
+{
+  "generated_at": "2026-11-03T20:44:24.609771+00:00",
+  "database": "tech_support_recommender",
+  "mongodb_version": "8.3.9",
+  "queries": [
+    {
+      "id": "Q1",
+      "description": "User lookup by normalized email",
+      "database": "tech_support_recommender",
+      "collection": "users",
+      "collection_size": 12,
+      "filter": {
+        "email": "engineer01-e33d8cca4b@example.invalid"
+      },
+      "sort": null,
+      "projection": null,
+      "limit": 1,
+      "nReturned": 1,
+      "totalKeysExamined": 1,
+      "totalDocsExamined": 1,
+      "executionTimeMillis": 0,
+      "winning_plan_stages": [
+        "EXPRESS_IXSCAN"
+      ],
+      "winning_plan_indexes": [
+        "email_unique"
+      ],
+      "index_traversal_observed": true,
+      "collection_scan_observed": false,
+      "explain_error": null
+    },
+    {
+      "id": "Q2",
+      "description": "Active catalog category and product filter",
+      "database": "tech_support_recommender",
+      "collection": "kb_items",
+      "collection_size": 41,
+      "filter": {
+        "deleted_at": null,
+        "category": "Networking",
+        "product": "RouterOS"
+      },
+      "sort": {
+        "created_at": -1,
+        "_id": -1
+      },
+      "projection": null,
+      "limit": 20,
+      "nReturned": 2,
+      "totalKeysExamined": 2,
+      "totalDocsExamined": 2,
+      "executionTimeMillis": 0,
+      "winning_plan_stages": [
+        "FETCH",
+        "IXSCAN",
+        "SORT"
+      ],
+      "winning_plan_indexes": [
+        "category_product"
+      ],
+      "index_traversal_observed": true,
+      "collection_scan_observed": false,
+      "explain_error": null
+    },
+    {
+      "id": "Q3",
+      "description": "Active catalog full-text search",
+      "database": "tech_support_recommender",
+      "collection": "kb_items",
+      "collection_size": 41,
+      "filter": {
+        "deleted_at": null,
+        "$text": {
+          "$search": "PostgreSQL authentication"
+        }
+      },
+      "sort": {
+        "relevance_score": {
+          "$meta": "textScore"
+        },
+        "created_at": -1,
+        "_id": -1
+      },
+      "projection": {
+        "relevance_score": {
+          "$meta": "textScore"
+        }
+      },
+      "limit": 20,
+      "nReturned": 5,
+      "totalKeysExamined": 7,
+      "totalDocsExamined": 10,
+      "executionTimeMillis": 0,
+      "winning_plan_stages": [
+        "FETCH",
+        "IXSCAN",
+        "PROJECTION_DEFAULT",
+        "SORT",
+        "TEXT_MATCH",
+        "TEXT_OR"
+      ],
+      "winning_plan_indexes": [
+        "catalog_text"
+      ],
+      "index_traversal_observed": true,
+      "collection_scan_observed": false,
+      "explain_error": null
+    },
+    {
+      "id": "Q4",
+      "description": "Personal interaction history, newest first",
+      "database": "tech_support_recommender",
+      "collection": "interactions",
+      "collection_size": 161,
+      "filter": {
+        "user_id": {
+          "$oid": "b5150c0ea1ff9052a6ae5350"
+        }
+      },
+      "sort": {
+        "timestamp": -1,
+        "_id": -1
+      },
+      "projection": null,
+      "limit": 20,
+      "nReturned": 16,
+      "totalKeysExamined": 16,
+      "totalDocsExamined": 16,
+      "executionTimeMillis": 0,
+      "winning_plan_stages": [
+        "FETCH",
+        "IXSCAN",
+        "SORT"
+      ],
+      "winning_plan_indexes": [
+        "user_history"
+      ],
+      "index_traversal_observed": true,
+      "collection_scan_observed": false,
+      "explain_error": null
+    },
+    {
+      "id": "Q5",
+      "description": "Item usage events, newest first",
+      "database": "tech_support_recommender",
+      "collection": "interactions",
+      "collection_size": 161,
+      "filter": {
+        "item_id": {
+          "$oid": "4d45f60331a7457479ecc22d"
+        }
+      },
+      "sort": {
+        "timestamp": -1
+      },
+      "projection": null,
+      "limit": 20,
+      "nReturned": 8,
+      "totalKeysExamined": 8,
+      "totalDocsExamined": 8,
+      "executionTimeMillis": 0,
+      "winning_plan_stages": [
+        "FETCH",
+        "IXSCAN",
+        "LIMIT"
+      ],
+      "winning_plan_indexes": [
+        "item_usage"
+      ],
+      "index_traversal_observed": true,
+      "collection_scan_observed": false,
+      "explain_error": null
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "generated_at": "2026-11-03T20:41:32.942631+00:00",
+  "database": "tech_support_recommender",
+  "active_catalog_count": 40,
+  "queries": [
+    {
+      "query": "PostgreSQL authentication",
+      "total_matches": 5,
+      "returned_matches": 5,
+      "categories": [
+        "Database Systems",
+        "Deployment and DevOps"
+      ],
+      "products": [
+        "Kubernetes",
+        "PostgreSQL"
+      ],
+      "results": [
+        {
+          "rank": 1,
+          "id": "3378bfbd7e0afe0984d514ac",
+          "title": "PostgreSQL 16 SCRAM authentication mismatch",
+          "category": "Database Systems",
+          "product": "PostgreSQL",
+          "relevance_score": 4.940625000000001
+        },
+        {
+          "rank": 2,
+          "id": "b3fa561ab8979e8484832841",
+          "title": "PostgreSQL 15 SCRAM authentication mismatch",
+          "category": "Database Systems",
+          "product": "PostgreSQL",
+          "relevance_score": 4.379166666666666
+        },
+        {
+          "rank": 3,
+          "id": "d2df25d1fc2912b97ddd34ce",
+          "title": "Read a PostgreSQL EXPLAIN plan",
+          "category": "Database Systems",
+          "product": "PostgreSQL",
+          "relevance_score": 1.725
+        },
+        {
+          "rank": 4,
+          "id": "98f4a52a31cf866117f19feb",
+          "title": "Investigate PostgreSQL table bloat",
+          "category": "Database Systems",
+          "product": "PostgreSQL",
+          "relevance_score": 1.725
+        },
+        {
+          "rank": 5,
+          "id": "5a162230b7f1e4d5b129a35d",
+          "title": "Resolve ImagePullBackOff for private registry",
+          "category": "Deployment and DevOps",
+          "product": "Kubernetes",
+          "relevance_score": 0.5714285714285714
+        }
+      ]
+    },
+    {
+      "query": "VPN troubleshooting",
+      "total_matches": 5,
+      "returned_matches": 5,
+      "categories": [
+        "Networking",
+        "Operating Systems",
+        "Security"
+      ],
+      "products": [
+        "RouterOS",
+        "Ubuntu",
+        "Vault",
+        "macOS"
+      ],
+      "results": [
+        {
+          "rank": 1,
+          "id": "2528cfbcc528fdcdb8410f4f",
+          "title": "Diagnose VPN packet fragmentation",
+          "category": "Networking",
+          "product": "RouterOS",
+          "relevance_score": 1.725
+        },
+        {
+          "rank": 2,
+          "id": "d1eeca28dddc7e1a81a61a63",
+          "title": "Vault policy path troubleshooting",
+          "category": "Security",
+          "product": "Vault",
+          "relevance_score": 0.625
+        },
+        {
+          "rank": 3,
+          "id": "82263432b87a0c319d5dee89",
+          "title": "Ubuntu 24.04 resolver stub troubleshooting",
+          "category": "Operating Systems",
+          "product": "Ubuntu",
+          "relevance_score": 0.5833333333333334
+        },
+        {
+          "rank": 4,
+          "id": "1b22ec20ad3d1c8b4da70aee",
+          "title": "Ubuntu 22.04 resolver stub troubleshooting",
+          "category": "Operating Systems",
+          "product": "Ubuntu",
+          "relevance_score": 0.5833333333333334
+        },
+        {
+          "rank": 5,
+          "id": "66685f3a830257dd8eebb202",
+          "title": "macOS 14 network extension change notes",
+          "category": "Operating Systems",
+          "product": "macOS",
+          "relevance_score": 0.5166666666666667
+        }
+      ]
+    },
+    {
+      "query": "Linux permissions",
+      "total_matches": 4,
+      "returned_matches": 4,
+      "categories": [
+        "Deployment and DevOps",
+        "Networking",
+        "Operating Systems",
+        "Security"
+      ],
+      "products": [
+        "GitHub Actions",
+        "Nginx",
+        "Vault",
+        "systemd"
+      ],
+      "results": [
+        {
+          "rank": 1,
+          "id": "31ebc4f749d971bb9e7a138e",
+          "title": "GitHub Actions token permission change notes",
+          "category": "Deployment and DevOps",
+          "product": "GitHub Actions",
+          "relevance_score": 2.964761904761905
+        },
+        {
+          "rank": 2,
+          "id": "4f973ae2d63021b399387fa2",
+          "title": "Load systemd service credentials from files",
+          "category": "Operating Systems",
+          "product": "systemd",
+          "relevance_score": 0.5192307692307693
+        },
+        {
+          "rank": 3,
+          "id": "fad29c27bc58c40923b244d4",
+          "title": "Nginx returns 502 Bad Gateway",
+          "category": "Networking",
+          "product": "Nginx",
+          "relevance_score": 0.5161290322580645
+        },
+        {
+          "rank": 4,
+          "id": "d1eeca28dddc7e1a81a61a63",
+          "title": "Vault policy path troubleshooting",
+          "category": "Security",
+          "product": "Vault",
+          "relevance_score": 0.5147058823529411
+        }
+      ]
+    }
+  ]
+}
